@@ -26,7 +26,7 @@ is very much a work in progress.
 License
 -------
 
-Copyright (c) 2010, Kris Kowal
+Copyright &copy; 2010, Kris Kowal, MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
