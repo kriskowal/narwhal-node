@@ -33,22 +33,24 @@ exports.QApp = function (length) {
     var q = Q.Queue(length);
     return function (request) {
         if (request.path !== "/")
-            return {"status": 404}; // 404
-        if (request.method == "GET") {
             return {
-                "status": 200,
+                "status": 404 // Not found
+            };
+        if (request.method === "GET") {
+            return {
+                "status": 200, // Ok
                 "headers": {"Content-Type": "text/plain"},
                 "body": q.get()
             };
-        } else if (request.method == "POST") {
+        } else if (request.method === "POST") {
             q.put(request.body);
             return {
-                "status": 200,
+                "status": 200, // Ok
                 "headers": {
                     "Content-Type": "text/plain"
                 },
                 "body": []
-            }
+            };
         } else {
             return {
                 "status": 405, // Method not allowed
@@ -57,7 +59,7 @@ exports.QApp = function (length) {
                     "Allow": "GET, POST"
                 },
                 "body": []
-            }
+            };
         }
     };
 };

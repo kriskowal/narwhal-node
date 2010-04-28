@@ -13,7 +13,7 @@ exports.Proxy = function (port, host) {
     };
 };
 
-var server = HTTP.Server(exports.Proxy(80, "google.com"));
+var server = HTTP.Server(exports.Proxy(80, "localhost"));
 
 Q.when(server.listen(port), function () {
     SYS.puts("Listining on " + port);
