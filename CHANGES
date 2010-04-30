@@ -1,0 +1,12 @@
+
+0.0.1
+
+* `require("narwhal/q-fs")`
+** Added support for write streams to `open`
+** Introduced `read` an `write` utility functions.
+* `require("narwhal/a-http")`
+** Added `connection` property to request objects,
+   referencing the Node connection object directly.
+* Introduced require("narwhal/q-os")
+** Introduced `popen` and `command`
+
