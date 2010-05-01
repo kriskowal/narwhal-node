@@ -141,7 +141,11 @@ Handle<Value> Transcoder::Transcode(const Arguments &args) {
     target_stop = target->length();
   }
 
-  const char *source_data = source->data() + source_start;
+  #ifdef __FreeBSD__
+  const
+  #endif
+  char *source_data = source->data() + source_start;
+
   char *target_data = target->data() + target_start;
   size_t source_capacity = source_stop - source_start;
   size_t target_capacity = target_stop - target_start;
