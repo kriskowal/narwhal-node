@@ -2,25 +2,14 @@
 Node Narwhal Compatibility Layer
 ================================
 
-A package used as an engine-specific compatibility for either
-Narwhal on Node or Node on Narwhal.  This is the `narwhal` subtree
-of the `narwhal-node` Narwhal engine package for Node, but can also
-be used be used as a Node package.
+In conjunction with `narwhal-lib`, provides Narwhal's libraries for
+Node.  Either manually, or via the package manager of your choice, you
+must arrange for `lib` and `narwhal-lib/lib` to be in `require.paths`
+albeit through the `NODE_PATH` environment variable.
 
-This package works in conjunction with `narwhal-lib`, which provides
-the pure-JavaScript components of Narwhal that can be used on any
-engine.
-
-Milage will vary depending on which modules you need and whether
-those modules in turn depend on Narwhal IO or transcoding modules.
-
-In the region where Narwhal and Node collide, there are a lot of big
-chunks of broken JavaScript lying around.  Not everything that works on
-Narwhal works on Node, and not everything that works on Node works on
-Narwhal.  A lot of Narwhal API's are in flux to accommodate Node,
-particular with regard to module name spaces.  If Narwhal module `X`
-doesn't load, it's likely that it's been moved to `narwhal/X`. This
-is very much a work in progress.
+Some synchronous API's are not available.  Transcoding, buffered IO,
+and some other things are enabled by building some `.node` libraries
+with `node-waf` or `make`.  No installation is necessary.
 
 
 License
