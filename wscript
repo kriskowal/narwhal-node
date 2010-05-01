@@ -1,5 +1,4 @@
 srcdir = '.'
-nodesrcdir = "/Users/kris/node/src"
 blddir = 'build'
 VERSION = '0.0.0'
 
@@ -14,18 +13,18 @@ def configure(conf):
 
 def build(bld):
   iconv = bld.new_task_gen('cxx', 'shlib', 'node_addon')
-  iconv.includes = 'src ' + nodesrcdir
+  iconv.includes = '/usr/include /usr/local/include src'
   iconv.target = 'iconv-embedding'
   iconv.source = 'src/narwhal_iconv.cc'
   iconv.uselib = "ICONV"
 
   os = bld.new_task_gen('cxx', 'shlib', 'node_addon')
-  os.includes = 'src ' + nodesrcdir
+  os.includes = '/usr/include /usr/local/include src'
   os.target = 'os-embedding'
   os.source = 'src/narwhal_os.cc'
 
   fs = bld.new_task_gen('cxx', 'shlib', 'node_addon')
-  fs.includes = 'src ' + nodesrcdir
+  fs.includes = '/usr/include /usr/local/include src'
   fs.target = 'fs-embedding'
   fs.source = 'src/narwhal_fs.cc'
 

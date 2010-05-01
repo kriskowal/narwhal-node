@@ -2,8 +2,8 @@
 #ifndef SRC_NODE_ICONV_H_
 #define SRC_NODE_ICONV_H_
 
-#include <node.h>
-#include <node_object_wrap.h>
+#include <node/node.h>
+#include <node/node_object_wrap.h>
 #include <v8.h>
 #include <iconv.h>
 

@@ -2,8 +2,8 @@
 #ifndef SRC_NARWHAL_FS_H_
 #define SRC_NARWHAL_FS_H_
 
-#include <node.h>
-#include <node_events.h>
+#include <node/node.h>
+#include <node/node_events.h>
 #include <v8.h>
 
 namespace node {

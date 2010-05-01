@@ -5,11 +5,12 @@
 #include <string.h>
 #include <unistd.h>
 #include <errno.h>
+#include <sys/wait.h>
 
 extern char **environ;
 
-using namespace narwhal;
 using namespace v8;
+using namespace node;
 
 static Handle<Value> Exit(const Arguments& args) {
   HandleScope scope;

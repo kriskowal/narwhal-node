@@ -5,7 +5,7 @@
 #include <node.h>
 #include <v8.h>
 
-namespace narwhal {
+namespace node {
 
 class Os {
  public:

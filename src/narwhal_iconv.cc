@@ -1,6 +1,6 @@
 // -- kriskowal Kris Kowal Copyright (C) 2010 MIT License
 #include <narwhal_iconv.h>
-#include <node_buffer.h>
+#include <node/node_buffer.h>
 #include <errno.h> // errno
 #include <string.h> // strerror
 
@@ -141,7 +141,7 @@ Handle<Value> Transcoder::Transcode(const Arguments &args) {
     target_stop = target->length();
   }
 
-  char *source_data = source->data() + source_start;
+  const char *source_data = source->data() + source_start;
   char *target_data = target->data() + target_start;
   size_t source_capacity = source_stop - source_start;
   size_t target_capacity = target_stop - target_start;

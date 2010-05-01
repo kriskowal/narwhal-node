@@ -10,8 +10,8 @@
 #include <assert.h>
 #include <string.h>
 #include <errno.h>
-#include <node_buffer.h>
 #include <limits.h>
+#include <node/node_buffer.h>
 
 /* used for readlink, AIX doesn't provide it */
 #ifndef PATH_MAX
