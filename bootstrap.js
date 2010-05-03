@@ -17,6 +17,8 @@ function main () {
 
     var natives = PROCESS.binding("natives");
     Object.keys(natives).forEach(function (name) {
+        if (name === "assert")
+            return; // narwhal has its own
         Object.defineProperty(modules, name, {
             "get": function () {
                 return require(name);
