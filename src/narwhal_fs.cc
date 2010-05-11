@@ -258,7 +258,7 @@ Handle<Value> Fs::WriteFrom(const Arguments& args) {
 
   Buffer *buffer;
   int fd;
-  char *buf = buffer->data();
+  char *buf;
   int start, stop, length;
   int written;
   off_t offset = -1; // sentinel for use write
