@@ -19,6 +19,8 @@ function main () {
     Object.keys(natives).forEach(function (name) {
         if (name === "assert")
             return; // narwhal has its own
+        if (name === "file")
+            return; // narwhal also has a deprecated module by this name
         Object.defineProperty(modules, name, {
             "get": function () {
                 return require(name);
