@@ -15,5 +15,15 @@
         "commands": {
             "build": "make"
         }
+    },
+    "overlay": {
+        "npm": {
+            "scripts": {
+                "preinstall": "make"
+            },
+            "engines": {
+                "node": ">=0.1.92"
+            }
+        }
     }
 }
