@@ -23,7 +23,7 @@ fi
 export NARWHAL_HOME
 
 # uses rlwrap (readline wrapper) if present
-NARWHAL="$(which rlwrap) $NARWHAL_GDB node"
+NARWHAL="$(which rlwrap 2>/dev/null) $NARWHAL_GDB node"
 
 $NARWHAL "$NODE_HOME"/bootstrap.js "$@"
 
